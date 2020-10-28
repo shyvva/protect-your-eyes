@@ -12,11 +12,11 @@ class App extends React.Component {
   formatTime = time => {
     const sec = Math.floor(time % 60).toString();
     const min = Math.floor((time / 60) % 60).toString();
-    return min.padStart(2,'0') + ':' + sec.padStart(2,'0');
+    return min.padStart(2, '0') + ':' + sec.padStart(2, '0');
   }
 
   step = () => {
-    this.setState({time: this.state.time - 1});
+    this.setState({ time: this.state.time - 1 });
     if (this.state.time === 0) {
       this.playBell();
       if (this.state.status === 'work') {
